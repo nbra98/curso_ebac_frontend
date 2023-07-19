@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body > header {
+  background-color: #2f3640;
+  color: #f5f6fa;
+  padding: 16px 0;
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header li {
+  display: inline;
+  font-weight: 600;
+}
+
+header li + li {
+  margin-left: 24px;
+}
+
+header li a {
+  color: #f5f6fa;
+  text-decoration: none;
+}
+
+header li a:hover {
+  text-decoration: underline;
+}
+
+section {
+  padding: 16px;
+}
+
+section h2 {
+  font-size: 32px;
+}
+
+section h2,
+.articles article {
+  margin-bottom: 16px;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1366px;
+}
+
+.articles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.articles article {
+  width: 30%;
+}
+
+.articles article img {
+  width: 100%;
+}
+
+.articles article h3 {
+  font-size: 24px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.articles article a {
+  display: inline-block;
+  background-color: blue;
+  border-radius: 4px;
+  color: #fff;
+  padding: 8px 12px;
+  margin-top: 8px;
+  text-decoration: none;
+}
+
+#sports {
+  background-color: rgba(0, 255, 0, 0.1);
+}
+
+#sports .articles article a {
+  background-color: rgba(0, 255, 0, 0.8);
+  color: #000;
+  font-weight: 600;
+}
+
+#sports .articles article a:hover {
+  background-color: rgb(2, 204, 2);
+}
+
+#economy {
+  background-color: #f8f59f;
+}
+
+#economy .articles article a {
+  background-color: #ffb651;
+  color: #000;
+  font-weight: 600;
+}
+
+#economy .articles article a:hover {
+  background-color: #ff9500;
+}
+
+#entertainment {
+  background-color: lightblue;
+}
+
+#entertainment .articles article a {
+  background-color: rgba(0, 0, 255, 0.5);
+  color: #000;
+  font-weight: 600;
+}
+
+#entertainment .articles article a:hover {
+  background-color: rgba(0, 0, 255, 0.9);
+}
+
+#technology {
+  background-color: rgba(119, 136, 153, 1.0);
+}
+
+#technology .articles article a {
+  background-color: rgb(121, 121, 121);
+  color: #000;
+  font-weight: 600;
+}
+
+#technology .articles article a:hover {
+  background-color: rgba(73, 73, 73, 0.9);
+}
