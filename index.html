@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Módulo 7 - Integrando HTML com JavaScript</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+  <h1>Validação dos Campos</h1>
+  <h2>* Número do Campo B deve ser maior que o número do Campo A</h2>
+    <form id="form-validation">
+
+      <div class="campos">
+        <div class="campo">
+          <label for="">Campo A</label>
+          <input id="number-a" type="number">
+        </div>
+        <div class="campo"> 
+          <label for="">Campo B</label>
+          <input id="number-b" type="number">
+        </div>
+      </div>
+
+      <button id="button-submit" type="submit">Testar</button>
+
+      <p class="sucess-message">(VÁLIDO) O número do Campo B é maior que o do Campo A!</p>
+      <p class="error-message">(INVÁLIDO) O número do Campo B é menor que o do Campo A!</p>
+      <p class="same-number-message">(EQUIVALENTE) Os números são iguais!</p>
+    </form>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
