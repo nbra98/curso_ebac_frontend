@@ -1,0 +1,206 @@
+* {
+  box-sizing: border-box;
+  font-family: monospace;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  display: flex;
+  margin: 0 auto;
+  max-width: 1024px;
+}
+
+header {
+  background-color: rgb(64, 102, 230);
+  padding: 20px;
+}
+
+header > .container {
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 a {
+  color: #fff;
+  font-size: 2rem;
+  font-style: italic;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+header nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+header nav ul li a {
+  font-size: 1.5rem;
+  padding: 5px 10px;
+}
+
+header nav ul li a:hover {
+  background-color: rgb(117, 144, 231);
+  border-radius: 4px;
+}
+
+header nav ul li a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.sobre-a-loja > div img {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.sobre-a-loja {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.sobre-a-loja h2 {
+  border-bottom: 2px solid rgb(64, 102, 230);
+  color: rgb(64, 102, 230);
+  font-size: 2rem;
+  font-style: italic;
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+}
+
+.sobre-a-loja div:first-child {
+  margin-right: 30px;
+}
+
+.sobre-a-loja p {
+  font-size: 1.1rem;
+}
+
+.produtos h2 {
+  border-bottom: 2px solid rgb(64, 102, 230);
+  color: rgb(64, 102, 230);
+  font-size: 2rem;
+  font-style: italic;
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+}
+
+.modelos-tenis {
+  display: grid;
+  grid-template-columns: repeat(4, 23.5%);
+  column-gap: 2%;
+  margin-top: 40px;
+}
+
+.modelos-tenis h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.modelos-tenis button {
+  background-color: rgb(64, 102, 230);
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 5px 10px;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.modelos-tenis button:hover {
+  background-color: rgb(117, 144, 231);
+}
+
+section .modelos-tenis {
+  margin-bottom: 100px;
+}
+
+.produtos .tenis img {
+  width: 100%;
+}
+
+@media screen and (max-width: 1140px) {
+  .container {
+    display: flex;
+    margin: 0 auto;
+    max-width: 90%;
+  }
+
+  .sobre-a-loja {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 30px;
+  }
+
+  .sobre-a-loja div img {
+    display: flex;
+    margin: 0 auto;
+    max-width: fit-content;
+    width: 100%;
+  }
+
+  .sobre-a-loja h2 {
+    margin-top: 20px;
+  }
+
+  .produtos {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+  } 
+
+  .modelos-tenis {
+    display: grid;
+    grid-template-columns: repeat(2, 48%);
+    column-gap: 2%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  header nav ul {
+    display: block;
+    text-align: center;
+    word-break: normal;
+  }
+
+  .container {
+    display: flex;
+    margin: 0 auto;
+    max-width: 90%;
+  }
+
+  .sobre-a-loja {
+    flex-direction: column;
+    justify-content: center;
+    margin: 30px;
+  }
+
+  .sobre-a-loja h2 {
+    margin-top: 20px;
+  }
+  
+  .produtos {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+  } 
+
+  .produtos h2 {
+    margin-bottom: 0;
+  }
+
+  .modelos-tenis {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
