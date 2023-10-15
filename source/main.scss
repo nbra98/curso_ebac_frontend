@@ -1,0 +1,89 @@
+@use 'config/reset.scss';
+@use 'config/variaveis.scss';
+@use 'sass:math';
+
+@mixin elementoForm() {
+  display: block;
+  padding: 8px;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+@function pixelParaEm($alvoEmPixel, $contextoEmPixel: 16px) {
+  @return math.div($alvoEmPixel, $contextoEmPixel)+em;
+}
+
+body {
+  background-color: variaveis.$background-color;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1024px;
+  width: 100%;
+}
+
+header {
+  background-color: variaveis.$primary-color;
+  color: #fff;
+  padding: 16px 0;
+  text-align: center;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 70px);
+  max-width: 760px;
+
+  h2 {
+    font-size: pixelParaEm(48px);
+    text-align: center;
+  }
+
+  form {
+    margin-top: 40px;
+    max-width: 480px;
+    width: 100%;
+
+    label {
+      cursor: pointer;
+      font-weight: 700;
+    }
+
+    input {
+      @include elementoForm();
+      background-color: transparent;
+      border: none;
+      border-bottom: 2px solid variaveis.$primary-color;
+    }
+
+    button {
+      @include elementoForm();
+      background-color: variaveis.$secondary-color;
+      border: none;
+      border-radius: 4px;
+      color: #fff;
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: 700;
+      text-align: center;
+
+      &:hover {
+        background-color: darken(variaveis.$secondary-color, 10%);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: variaveis.$mobile) {
+  .container {
+    max-width: 80%;
+  }
+}
+
+@media screen and (max-width: variaveis.$tablet) {
+  
+}
