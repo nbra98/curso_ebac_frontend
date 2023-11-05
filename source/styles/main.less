@@ -1,0 +1,175 @@
+@import 'mapas.less';
+
+@breakpointHeader: ~"(max-width: 1050px)";
+@breakpointTablet: ~"(min-width: 501px) and (max-width: 800px)";
+@breakpointMobile: ~"(max-width: 500px)";
+
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #colors[background_color];
+  color: #colors[text_color];
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  background-color: #colors[button_color];
+  border-radius: 4px;
+  color: #colors[text_color];
+  padding: 8px 16px;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #colors[button_color2];
+  }
+}
+
+.mb-05rem {
+  margin-bottom: 0.5rem;
+}
+
+.mb-1rem {
+  margin-bottom: 1rem;
+}
+
+.mb-2rem {
+  margin-bottom: 2rem;
+}
+
+.mt-1rem {
+  margin-top: 1rem;
+}
+
+.mt-3rem {
+  margin-top: 3rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 1000px;
+}
+  
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .mt-1rem();
+
+  
+  .menu {
+    display: flex;
+    gap: 2rem;
+  }
+}
+
+section {
+  .mt-3rem(); 
+
+  h2 {
+    .mb-1rem();
+  }
+
+  .products {
+    display: flex;
+    text-align: center;
+
+    .products-item {
+
+      img {
+        .mb-05rem();
+      }
+
+      h4 {
+        .mb-05rem();
+      }
+
+      p {
+        .mb-1rem();
+      }
+    }
+  }
+}  
+
+@media @breakpointHeader {
+  .container {
+    header {
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+  }
+}
+
+@media @breakpointTablet {
+  .container {
+
+    header {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    section {
+
+      h2 {
+        text-align: center;
+        .mb-2rem();
+      }
+
+      .products {
+        display: grid;
+        grid-template-columns: repeat(2, 49%); 
+
+        .products-item {
+          .mb-2rem();
+
+          p {
+            max-width: 25ch;
+            margin: 0 auto;
+            .mb-1rem();
+          }
+        }
+      }
+    }
+  }
+}
+
+@media @breakpointMobile {
+  .container {
+    header {
+      display: flex;
+      flex-direction: column;
+
+      .branding {
+        .mb-1rem();
+      }
+    }
+
+    section {
+      text-align: center;
+
+      .products {
+        display: block;
+
+        .products-item {
+          .mb-2rem();
+
+          p {
+            max-width: 25ch;
+            margin: 0 auto;
+            .mb-1rem();
+          }
+        }
+      }
+    }
+  }
+}

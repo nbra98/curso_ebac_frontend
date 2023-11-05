@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #2c3e50;
+  color: black;
+}
+li {
+  list-style: none;
+}
+a {
+  background-color: #7f8c8d;
+  border-radius: 4px;
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+a:hover {
+  background-color: #4a637c;
+}
+.mb-05rem {
+  margin-bottom: 0.5rem;
+}
+.mb-1rem {
+  margin-bottom: 1rem;
+}
+.mb-2rem {
+  margin-bottom: 2rem;
+}
+.mt-1rem {
+  margin-top: 1rem;
+}
+.mt-3rem {
+  margin-top: 3rem;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 1000px;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+header .menu {
+  display: flex;
+  gap: 2rem;
+}
+section {
+  margin-top: 3rem;
+}
+section h2 {
+  margin-bottom: 1rem;
+}
+section .products {
+  display: flex;
+  text-align: center;
+}
+section .products .products-item img {
+  margin-bottom: 0.5rem;
+}
+section .products .products-item h4 {
+  margin-bottom: 0.5rem;
+}
+section .products .products-item p {
+  margin-bottom: 1rem;
+}
+@media (max-width: 1050px) {
+  .container header {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+@media (min-width: 501px) and (max-width: 800px) {
+  .container header {
+    display: flex;
+    justify-content: space-around;
+  }
+  .container section h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .container section .products {
+    display: grid;
+    grid-template-columns: repeat(2, 49%);
+  }
+  .container section .products .products-item {
+    margin-bottom: 2rem;
+  }
+  .container section .products .products-item p {
+    max-width: 25ch;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+  }
+}
+@media (max-width: 500px) {
+  .container header {
+    display: flex;
+    flex-direction: column;
+  }
+  .container header .branding {
+    margin-bottom: 1rem;
+  }
+  .container section {
+    text-align: center;
+  }
+  .container section .products {
+    display: block;
+  }
+  .container section .products .products-item {
+    margin-bottom: 2rem;
+  }
+  .container section .products .products-item p {
+    max-width: 25ch;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+  }
+}
